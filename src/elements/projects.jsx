@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-let projects = [
+const projects = [
     {
         title: "Project #1",
         publishedDate: "September 8, 2023",
@@ -17,13 +17,19 @@ let projects = [
     }
 ];
 
-function Projects() {
-    // State to control how many projects are visible
-    const [visibleCount, setVisibleCount] = useState(2); // Start with 3 projects visible
 
-    // Function to show more projects
+const languageImages = import.meta.glob('../assets/img/*.png', { eager: true });
+
+function Projects() {
+    const [visibleCount, setVisibleCount] = useState(2);
+
     const showMoreProjects = () => {
-        setVisibleCount(visibleCount + 1); // Show 3 more projects when the button is clicked
+        setVisibleCount(visibleCount + 1);
+    };
+
+    const getImageSrc = (lang) => {
+        const imagePath = `../assets/img/${lang}.png`;
+        return languageImages[imagePath]?.default || '';
     };
 
     return (
@@ -34,46 +40,48 @@ function Projects() {
                     <h4 className="fw-semibold text-color-1">Every web app is a special creation, designed to make online experiences better. 🌟</h4>
                 </div>
                 <div className="projects-container d-grid m-5 px-lg-5 gap-3">
-                    {
-                        projects.slice(0, visibleCount).map((project, index) => {
-                            return (
-                                <div className="card shadow-sm p-3" key={index}>
-                                    <div className={`row g-0 ${index % 2 === 0 ? "flex-row-reverse" : "flex-row"}`}>
-                                        <div className="project-img overflow-hidden shadow-sm border border-2 rounded-2 col-md-6" style={{ height: "500px" }}>
-                                            <img src={project.projectImage} className="img-fluid" alt="..." />
-                                        </div>
-                                        <div className="col-md-6 px-lg-5 px-2 d-flex align-items-center">
-                                            <div className="card-body text-center">
-                                                <h5 className="card-title">{`${project.title} ${project.publishedDate}`}</h5>
-                                                <p className="card-text .text-color-2">{project.description}</p>
-                                                <div>
-                                                    {
-                                                        project.languageUsed.map((lang, idx) => {
-                                                            return (
-                                                                <img className="project-language" key={idx} src={require(`../assets/img/${lang}.png`)} alt="" />
-                                                            );
-                                                        })
-                                                    }
-                                                </div>
-                                           </div>
+                    {projects.slice(0, visibleCount).map((project, index) => (
+                        <div className="card shadow-sm p-3" key={index}>
+                            <div className={`row g-0 ${index % 2 === 0 ? "flex-row-reverse" : "flex-row"}`}>
+                                <div className="project-img overflow-hidden shadow-sm border border-2 rounded-2 col-md-6" style={{ height: "500px" }}>
+                                    <img src={project.projectImage} className="img-fluid" alt="..." />
+                                </div>
+                                <div className="col-md-6 px-lg-5 px-2 d-flex align-items-center">
+                                    <div className="card-body text-center">
+                                        <h5 className="card-title">{`${project.title} ${project.publishedDate}`}</h5>
+                                        <p className="card-text .text-color-2">{project.description}</p>
+                                        <div>
+                                            {project.languageUsed.map((lang, idx) => {
+                                                const imgSrc = getImageSrc(lang);
+                                                return (
+                                                    <img 
+                                                        className="project-language" 
+                                                        key={idx} 
+                                                        src={imgSrc} 
+                                                        alt={lang}
+                                                        onError={(e) => {
+                                                            e.target.style.display = 'none';
+                                                        }}
+                                                    />
+                                                );
+                                            })}
                                         </div>
                                     </div>
                                 </div>
-                            )
-                        })
-                    }
+                            </div>
+                        </div>
+                    ))}
                 </div>
                 <div className='d-flex justify-content-center'>
-                {visibleCount < projects.length && (
-                    <button className="btn btn-primary mt-3" onClick={showMoreProjects}>
-                        See more
-                    </button>
-                )}
+                    {visibleCount < projects.length && (
+                        <button className="btn btn-primary mt-3" onClick={showMoreProjects}>
+                            See more
+                        </button>
+                    )}
                 </div>
-                
             </div>
         </section>
-    )
+    );
 }
 
 export default Projects;
