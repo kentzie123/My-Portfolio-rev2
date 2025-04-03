@@ -1,0 +1,24 @@
+.footer-container{
+    background-color: #2d2e32;
+    color: white;
+}
+
+.social{
+    height: 30px;
+    width: 30px;
+    filter: brightness(0) invert(1);
+    transition: transform .3s ease-in-out;
+}
+.social:hover{
+    transform: scale(.9);
+}
+.social:nth-child(1){
+    background-image: url(../img/linkedin.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.social:nth-child(2){
+    background-image: url(../img/github.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}

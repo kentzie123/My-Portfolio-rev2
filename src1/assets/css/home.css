@@ -1,0 +1,43 @@
+#home{
+    min-height: 93vh;
+}
+
+.profile{
+    width: 18rem;
+    border-radius: 50%;
+    animation: .7s slideY ease-in-out forwards ,morph 8s infinite;
+    animation-delay: .5s;
+    transition: all 1s ease-in-out;
+    border: 3px solid var(--profile);
+}
+
+.socials a svg{
+    margin-right: .6rem;
+    height: 25px;
+    width: 25px;
+    color: black;
+    transition: color .3s ease;
+}
+.socials a svg:hover{
+    color: #147efb;
+}
+
+.waving{
+    height: 55px;
+    width: 55px;
+}
+
+
+@keyframes morph {
+    0% {
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+
+    50% {
+      border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+
+    100% {
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+  }

@@ -1,0 +1,4 @@
+.cert-modal{
+    z-index: 10000;
+    background: rgba(0, 0, 0, 0.85);
+}

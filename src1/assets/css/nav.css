@@ -1,0 +1,8 @@
+.hover-float li a{
+    display: inline-block;
+    transition: all .3s;
+}
+.hover-float li a:hover{
+    color: #147efb;
+    transform: translateY(-3.5px);
+}

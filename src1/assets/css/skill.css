@@ -1,0 +1,51 @@
+.skill-container{
+    cursor: pointer;
+}
+
+.skill-icon-container{
+    height: 150px;
+    padding: 10px;
+    transition: height .3s ease-in-out;
+}
+
+.skill-icon-container svg{
+    height: 125px;
+    width: auto;
+    transition: transform .3s ease-in-out;
+}
+.skill-container:hover .skill-icon-container svg{
+    transform: scale(2);
+}
+
+
+.knowledges-info{
+    height: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    transition: all .3s ease-in-out;
+}
+.skill-container:hover .knowledges-info{
+    height: 90px;
+    
+}
+
+.skill-container .knowledges-info ul li{
+    transform: translateX(-250px);
+}
+
+.skill-container:hover .knowledges-info ul li{
+    animation: appearFromLeft 0.7s forwards;
+    
+}
+
+@keyframes appearFromLeft {
+    from {
+        transform: translateX(-250px);
+    }
+    70% {
+        transform: translateX(20px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
