@@ -2,16 +2,22 @@ import { useGlobalContext } from "./context";
 
 const certificates = [
     {
-        title: "Computer System Servicing (NCII)",
-        certImgUrl: "css",
-        from: "TESDA",
-        dateAcquired: "September 29, 2020"
+        title: "CSS Skills Olympic Champion",
+        certImgUrl: "foundersday",
+        from: "CITE Technical Institute, Inc.",
+        dateAcquired: "February 14, 2023"
     },
     {
-        title: "Computer System Servicing (NCII)",
-        certImgUrl: "sample",
-        from: "TESDA",
-        dateAcquired: "September 29, 2020"
+        title: "Low Code Development Outstanding Performance",
+        certImgUrl: "alliance2",
+        from: "Alliance Software, Inc.",
+        dateAcquired: "December 20, 2024"
+    },
+    {
+        title: "Alliance Low Code Training Completion",
+        certImgUrl: "alliance1",
+        from: "Alliance Software, Inc.",
+        dateAcquired: "December 20, 2024"
     }
 ];
 
