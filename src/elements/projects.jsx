@@ -25,7 +25,7 @@ const projects = [
   description:
     "TickSys is a full-stack help desk ticketing system with a real-time dashboard powered by Recharts for data visualization. It enables users to create, track, and manage tickets with features like comments, user ratings, and status updates. The system also includes live notifications to instantly alert users when a ticket is assigned or updated. In addition, a Knowledge Base page provides articles that can be viewed, rated, and tracked with view counts. Built with ReactJS, Bootstrap, NodeJS, MongoDB, Socket.IO, and Recharts, TickSys highlights my skills in building responsive UIs, real-time communication, and analytics-driven workflows for efficient issue management.",
   languageUsed: ["reactjs", "bootstrap", "nodejs", "mongodb"],
-  link: "https://ticksys.netlify.app/",
+  link: "https://ticksys.netlify.app/login",
   isScrolling: false,
 }
 
