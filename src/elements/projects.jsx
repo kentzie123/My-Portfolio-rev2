@@ -2,13 +2,13 @@ import React, { useState } from "react";
 
 const projects = [
   {
-    title: "SHOPPIN",
-    projectImage: "myECommerceProject.webp",
+    title: "TickSys",
+    projectImage: "ticksys.webp",
     description:
-      "Shoppin is a frontend eCommerce web application built with ReactJS and Bootstrap. It features a clean and responsive interface where users can browse products, view details, and explore a smooth shopping experience. This project highlights my skills in building dynamic, reusable components and designing user-friendly interfaces.",
-    languageUsed: ["reactjs", "bootstrap"],
-    link: "https://kentadrianegoc-ongshoppinapp.netlify.app",
-    isScrolling: true,
+      "TickSys is a full-stack help desk ticketing system with a real-time dashboard powered by Recharts for data visualization. It enables users to create, track, and manage tickets with features like comments, user ratings, and status updates. The system also includes live notifications to instantly alert users when a ticket is assigned or updated. In addition, a Knowledge Base page provides articles that can be viewed, rated, and tracked with view counts. Built with ReactJS, Bootstrap, NodeJS, MongoDB, Socket.IO, and Recharts, TickSys highlights my skills in building responsive UIs, real-time communication, and analytics-driven workflows for efficient issue management.",
+    languageUsed: ["reactjs", "bootstrap", "nodejs", "mongodb"],
+    link: "https://ticksys.netlify.app/login",
+    isScrolling: false,
   },
   {
     title: "Chattrix",
@@ -20,16 +20,14 @@ const projects = [
     isScrolling: false,
   },
   {
-  title: "TickSys",
-  projectImage: "ticksys.webp",
-  description:
-    "TickSys is a full-stack help desk ticketing system with a real-time dashboard powered by Recharts for data visualization. It enables users to create, track, and manage tickets with features like comments, user ratings, and status updates. The system also includes live notifications to instantly alert users when a ticket is assigned or updated. In addition, a Knowledge Base page provides articles that can be viewed, rated, and tracked with view counts. Built with ReactJS, Bootstrap, NodeJS, MongoDB, Socket.IO, and Recharts, TickSys highlights my skills in building responsive UIs, real-time communication, and analytics-driven workflows for efficient issue management.",
-  languageUsed: ["reactjs", "bootstrap", "nodejs", "mongodb"],
-  link: "https://ticksys.netlify.app/login",
-  isScrolling: false,
-}
-
-
+    title: "SHOPPIN",
+    projectImage: "myECommerceProject.webp",
+    description:
+      "Shoppin is a frontend eCommerce web application built with ReactJS and Bootstrap. It features a clean and responsive interface where users can browse products, view details, and explore a smooth shopping experience. This project highlights my skills in building dynamic, reusable components and designing user-friendly interfaces.",
+    languageUsed: ["reactjs", "bootstrap"],
+    link: "https://kentadrianegoc-ongshoppinapp.netlify.app",
+    isScrolling: true,
+  },
 ];
 
 // Import all images from the assets folder
